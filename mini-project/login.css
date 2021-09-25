@@ -40,3 +40,9 @@ img.avatar{
 .container{
     padding: 16px;
 }
+.link{
+    display: inline-block;
+    padding-left: 50%;
+    padding-right: 50%;
+    padding-top: 20px;
+}

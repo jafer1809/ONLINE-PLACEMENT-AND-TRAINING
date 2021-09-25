@@ -1,15 +1,16 @@
 body{
-    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 img{
-      border: 1px solid #ddd;
+      border: 3px solid black;
   border-radius: 4px;
   padding: 5px;
   width: 190px;
+    
 }
 .student{
+    padding-right: 40px;
     float: left;
     display: table-column
 }
@@ -24,10 +25,65 @@ img{
     display: table;
     padding-left: 35%;
     padding-right: 25%;
+    padding-bottom: 100px;
 }
 .welcome
 {
+    border: 3px solid black;
+  border-radius: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #ff0000;
     padding-top: 50px;
     padding-left: 30%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+    background-image: url(index.jpg);
+    text-align: center;
+    background-repeat: repeat-x;
+    
+}
+img:hover{
+    background-color: cadetblue;
+}
+.link{
+   position: relative;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    padding-right: 10%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+}
+.l1{
+    float: left;
+    text-decoration-color: crimson;
+    padding-left: 40%;
+    padding-right: 30px;;
+    
+}
+.l2{
+    float: right;
+    text-decoration-color: crimson;
     padding-right: 30%;
+}
+a:hover{
+    color: darkgreen;
+}
+.dotted-line{
+all: initial;
+    border-top: 2px dashed black;
+    padding-bottom: 30px;
+}
+.company_come{
+    border: 3px solid white;
+  border-radius: 2px;
+}
+.comp1{
+   all: initial;
+text-align: center;
+    text-transform: uppercase;
+    text-decoration-color: whitesmoke;
+    padding-left: 50%;
+    padding-right: 30%;
+    font-size: 20px;
 }
