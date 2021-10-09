@@ -9,7 +9,7 @@
 <h1 class="welcome"> welcome to training and placement</h1>
 <hr>
 <div class="form-login">
-<form action="signup_student.php" method="post">
+<form action="student.php" method="post">
       <div class="email">
        <label for="email">
                <b>
@@ -35,7 +35,7 @@
                forget <a href="#">password?</a>
            </span> 
            <span class="signup">
-               ......dont have account??<a href="#">signup</a>
+               ......dont have account??<a href="signup_student.php">signup</a>
            </span>
            </div>
   

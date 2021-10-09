@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>signup</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+<h1 class="welcome"> welcome to training and placement</h1>
+<hr>
 <div class="box">
-    <form action="student.php" method="post">
-        <label for="name">
+    <form action="student_signup.php" method="post">
+        <div class="name">
+           <label for="name">
             name
         </label>
         <input type="text" placeholder="name" name="name" required>
         <br>
+        </div>
         <label for="father name">
             father name
         </label>
@@ -36,17 +41,17 @@
         </label>
         <input type="password" name="psw" placeholder="password" required>
         <label for="10passing year">
-            <br>10th passing date
+            <br>10th passing year
         </label>
-        <input type="date" name="10passingdate" required>
+        <input type="number" name="10passingdate" required>
         <lable for="class 10">
             <br>class 10th(cgpa)
         </lable>
         <input type="number" name="10th" placeholder="10th cgpa">
         <label for="12passing year">
-            <br>12th passing date
+            <br>12th passing year
         </label>
-        <input type="date" name="12passingdate" required>
+        <input type="number" name="12passingdate" required>
         <lable for="class 10">
             <br>class 12th(%)
         </lable>

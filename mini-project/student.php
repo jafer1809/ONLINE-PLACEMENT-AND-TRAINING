@@ -1,24 +1,49 @@
 <?php
-if(isset($_POST['submit']))
-{
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $dob=$_POST['dob'];
-    $fn=$_POST['fathername'];
-    $gender=$_POST['gender'];
-    $psw=$_POST['psw'];
-    $pd10=$_POST['10passingdate'];
-    $n10=$_POST['10th'];
-    $pd12=$_POST['12passingdate'];
-    $n12=$_POST['12TH'];
-    $connection=mysqli_connect('localhost','root','','user');
-    if($connection)
-    {
-        $query="INSERT INTO STUDENT(NAME,EMAIL,DOB,FATHER_NAME,GENDER,PASSWORD,PASSING_YEAR_10,CGPA_10,PASSING_YEAr_12,PERCENTAGE_12)";
-        $query .="VALUES('$name','$email','$dob','$fn','$gender','$psw','$pd10','$n10','$pd12','$n12')"; 
-        $sqlquery=mysqli_query($connection,$query);
-    }
-    else
-        die("database not found");
-}
+session_start();
 ?>
+<?php
+
+    if(isset($_POST['submit']))
+    {
+        echo "hii";
+        $connection=mysqli_connect('localhost','root','','user');
+        $email=$_POST['email'];
+        $psw=$_POST['psw'];
+        $query="select * from student";
+        if($connection){
+        $result=mysqli_query($connection,$query);
+            $t=0;
+        while($row=mysqli_fetch_assoc($result))
+        {
+            if($row['password']==$psw && $row['email']==$email)
+            {
+                $_SESSION['NAME']=$row['name'];
+                $t=1;
+            header("Location: student_index.php");
+            }
+            
+             
+        }
+        if($t==0)
+        { 
+                $error="email or password is wrong";
+                    header("Location: login_student.php");
+            echo $error;
+        }
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="profile.php">profile</a>
+
+
+    
+</body>
+</html>

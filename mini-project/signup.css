@@ -1,0 +1,36 @@
+.box{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-image: url(index2.jpg);
+}
+input{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.name{
+padding-bottom: 10px;
+    padding-top: 10px;
+}
+.welcome
+{
+    border: 3px solid black;
+  border-radius: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #ff0000;
+    padding-top: 50px;
+    padding-left: 30%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+    background-image: url(index2.jpg);
+    text-align: center;
+    background-repeat: repeat-x;
+}
+body{
+    
+}
