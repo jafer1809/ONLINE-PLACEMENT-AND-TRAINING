@@ -67,4 +67,28 @@
     background-color: floralwhite;
     text-decoration-color: black;
     
+    
+}
+
+table{
+    border: 1px solid black;
+    margin-top: 50px;
+}
+tr,td{
+    border: 1px solid black;
+    padding-left: 300px;
+    padding-right: 330px;
+    text-transform: uppercase;
+}
+.heading{
+    background-color: black;
+    text-decoration-color: aliceblue;
+    color: antiquewhite;
+}
+.dob{
+    background-color: black;
+    text-decoration-color: aliceblue;
+    color: antiquewhite;
+    padding-left: 250px;
+    padding-right: 200px;
 }
