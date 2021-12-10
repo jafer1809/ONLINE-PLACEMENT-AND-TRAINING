@@ -9,26 +9,22 @@ session_start();
         $connection=mysqli_connect('localhost','root','','user');
         $email=$_POST['email'];
         $psw=$_POST['psw'];
-        $query="select * from student";
+        $query="select * from company";
         if($connection){
         $result=mysqli_query($connection,$query);
             $t=0;
         while($row=mysqli_fetch_assoc($result))
         {
-            if($row['password']==$psw && $row['email']==$email)
+            if($row['psw']==$psw && $row['email']==$email)
             {
                 $_SESSION['NAME']=$row['name'];
                 $_SESSION['email']=$row['email'];
                 $_SESSION['dob']=$row['dob'];
-                $_SESSION['father']=$row['father_name'];
-                $_SESSION['gender']=$row['gender'];
-                $_SESSION['passing10']=$row['passing_year_10'];
-                $_SESSION['cgpa10']=$row['cgpa_10'];
-                $_SESSION['passing12']=$row['passing_year_12'];
-                $_SESSION['cgpa12']=$row['percentage_12'];
+                $_SESSION['id']=$row['id'];
+                
 
                 $t=1;
-            header("Location: student_index.php");
+            header("Location: company_index.php");
             }
             
              

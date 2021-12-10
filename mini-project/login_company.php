@@ -35,7 +35,7 @@
                forget <a href="#">password?</a>
            </span> 
            <span class="signup">
-               ......dont have account??<a href="#">signup</a>
+               ......dont have account??<a href="company_signup.php">signup</a>
            </span>
            </div>
   

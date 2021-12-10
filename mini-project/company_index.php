@@ -19,12 +19,11 @@ session_start();
             menu
         </button>
         <div class="dropdown-content">
-            <a href="student_index.php">home</a>
-            <a href="profile.php">profile</a>
-            <a href="training.php">training</a>
-            <a href="#">company</a>
-            <a href="#">company applied </a>
-            <a href="https://www.overleaf.com/latex/templates/indian-institute-of-technology-bombay-resume/fgnpzhygqxrq">create your resume</a>
+            <a href="company_index.php">home</a>
+            <a href="stats.php">stats</a>
+            <a href="#">post job</a>
+            <a href="#">student applied</a>
+            <a href="#">upload images</a>
             <a href="index.php">logout</a>
         </div>
     </div>
