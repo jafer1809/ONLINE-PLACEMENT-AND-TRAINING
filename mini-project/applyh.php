@@ -36,12 +36,33 @@ session_start();
     </div>
    
 </div>
-    <a href="c++.php"><img src="c++.png"></a>
-    <a href="java.php"><img src="java.png"></a>
-    <a href="python.php"><img src="python.jpg"></a>
-    <a href="sql.php"><img src="sql.png"></a>
-    <a href="data_structure.php"><img src="data_structure.jpg"</a>
-
+<div class="box">
+<form action="apply.php" method="post">
+   <label>post id</label>
+    <input type="number" name="pid" required>
+    <br>
+    <label>institution name</label>
+    <input type="text" name="inst_name" required>
+        <br>
+    <label>course</label>
+    <input type="text" name="course" required>
+    <br>
+    <lable>branch</lable>
+    <input type="text" name="branch" required>
+    <br>
+    <lable> passing year</lable>
+    <input type="date" name="p_year" required>
+    <br>
+    <label> agregate cgpa</label>
+    <input type="text" name="cgpa" required>
+    <br>
+     <div class="submit-button">
+        <button type="submit" name="submit">
+            apply
+        </button>
+        </div>
+</form>
+</div>
     
 </body>
 </html>

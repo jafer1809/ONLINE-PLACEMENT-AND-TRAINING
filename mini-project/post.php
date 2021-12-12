@@ -20,10 +20,10 @@ session_start();
         </button>
         <div class="dropdown-content">
             <a href="company_index.php">home</a>
-
+          
             <a href="post.php">post job</a>
-            <a href="student_applied.php">student applied</a>
-            <a href="upload.php">post  quotes</a>
+             <a href="student_applied.php">student applied</a>
+            <a href="upload.php">post quotes</a>
             <a href="index.php">logout</a>
         </div>
     </div>
@@ -36,24 +36,23 @@ session_start();
     </div>
    
 </div>
-
-    <?php
-        $connection=mysqli_connect('localhost','root','','user');
-        $query="SELECT * FROM POST";
-         $result=mysqli_query($connection,$query);
-        while($row=mysqli_fetch_assoc($result))
-        {
-            ?>
-            <div class="getc">
-                <?php echo $row['name']; ?>
-                <br>
-                <div class="content">
-                    <?php echo $row['post']; ?>
-                </div>
-            </div>
-        <?php
-        }
-    ?>
+<div class="box">
+    <form action="post_backend.php" method="post">
+       <label for="post name">
+           job name
+       </label>
+        <input type="text" name="job_name" required>
+        <label for="total post">
+            total post
+        </label>
+        <input type="number" name="total_post" required>
+        <div class="submit-button">
+        <button type="submit" name="submit">
+            post job
+        </button>
+        </div>
+    </form>
+</div>
    
 </body>
 </html>

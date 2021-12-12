@@ -21,7 +21,7 @@ session_start();
             <a href="student_index.php">home</a>
             <a href="profile.php">profile</a>
             <a href="training.php">training</a>
-             <a href="hire.php">company</a>
+            <a href="hire.php">company</a>
             <a href="capllied.php">company applied </a>
             <a href="https://www.overleaf.com/latex/templates/indian-institute-of-technology-bombay-resume/fgnpzhygqxrq">create your resume</a>
             <a href="index.php">logout</a>
@@ -36,12 +36,36 @@ session_start();
     </div>
    
 </div>
-    <a href="c++.php"><img src="c++.png"></a>
-    <a href="java.php"><img src="java.png"></a>
-    <a href="python.php"><img src="python.jpg"></a>
-    <a href="sql.php"><img src="sql.png"></a>
-    <a href="data_structure.php"><img src="data_structure.jpg"</a>
-
+<table>
+    <tr>
+        <td class="heading">postid</td>
+        <td class="heading"> company name</td>
+        <td class="heading">job type</td>
+        <td class="heading"> total no of post</td>
+    </tr>
+   
+    <?php
+        $connection=mysqli_connect('localhost','root','','user');
+        $query="SELECT * FROM JOB";
+         $result=mysqli_query($connection,$query);
+        while($row=mysqli_fetch_assoc($result))
+        {
+            ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['company_name']; ?></td>
+                <td><?php echo $row['job_name']; ?></td>
+                <td><?php echo $row['total_post']; ?></td>
+            </tr>
+    <?php
+        }
+    ?>
     
+    
+    
+</table> 
+<div class="apply">
+        <a href="applyh.php">apply</a>
+    </div> 
 </body>
 </html>

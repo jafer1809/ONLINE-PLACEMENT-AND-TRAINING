@@ -36,24 +36,14 @@ session_start();
     </div>
    
 </div>
-
-    <?php
-        $connection=mysqli_connect('localhost','root','','user');
-        $query="SELECT * FROM POST";
-         $result=mysqli_query($connection,$query);
-        while($row=mysqli_fetch_assoc($result))
-        {
-            ?>
-            <div class="getc">
-                <?php echo $row['name']; ?>
-                <br>
-                <div class="content">
-                    <?php echo $row['post']; ?>
-                </div>
-            </div>
-        <?php
-        }
-    ?>
+<div class="upload">
+    <form action="uploadp.php" method="post">
+        <input type="text" name="text" placeholder="enter something">
+        <button type="submit" name="submit">
+            post
+        </button>
+    </form>
+</div>
    
 </body>
 </html>

@@ -26,6 +26,7 @@ session_start();
                 $_SESSION['cgpa10']=$row['cgpa_10'];
                 $_SESSION['passing12']=$row['passing_year_12'];
                 $_SESSION['cgpa12']=$row['percentage_12'];
+                $_SESSION['id']=$row['id'];
 
                 $t=1;
             header("Location: student_index.php");
